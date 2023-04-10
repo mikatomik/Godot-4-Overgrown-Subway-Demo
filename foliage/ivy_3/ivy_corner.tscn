@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bagx6x5xypwhn"]
+
+[ext_resource type="PackedScene" uid="uid://bh11udwr2wanp" path="res://foliage/ivy_3/ivy_corner.gltf" id="1_e23no"]
+[ext_resource type="Material" uid="uid://b7k0c75ilvw27" path="res://foliage/textures/vegetation.tres" id="2_1q8r5"]
+
+[node name="ivy_corner" instance=ExtResource("1_e23no")]
+
+[node name="Ivy_corner" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_1q8r5")

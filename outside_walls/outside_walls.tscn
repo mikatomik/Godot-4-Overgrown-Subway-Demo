@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://3bnhatpu5a2h"]
+
+[ext_resource type="PackedScene" uid="uid://cfu2jorokia21" path="res://outside_walls/outside_walls.blend" id="1_5xjpc"]
+
+[node name="outside_walls" instance=ExtResource("1_5xjpc")]
+
+[node name="Plane" parent="." index="0"]
+gi_mode = 0
+
+[node name="Plane002" parent="." index="1"]
+gi_mode = 0
+
+[node name="Plane001" parent="." index="2"]
+gi_mode = 0
+
+[node name="Plane003" parent="." index="3"]
+gi_mode = 0

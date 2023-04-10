@@ -1,0 +1,29 @@
+[gd_scene load_steps=8 format=3 uid="uid://cotilwrgd6727"]
+
+[ext_resource type="PackedScene" uid="uid://cwu3v6p0d10jq" path="res://props/cork_board/corkboard.blend" id="1_2l0bw"]
+[ext_resource type="Texture2D" uid="uid://chc4mj3j840sp" path="res://props/cork_board/textures/cork_board_color.png" id="2_csuha"]
+[ext_resource type="Texture2D" uid="uid://s4cjcl0vcik8" path="res://props/cork_board/textures/cork_board_metallic.png" id="3_y1l5k"]
+[ext_resource type="Texture2D" uid="uid://dpds6w87d7v5j" path="res://props/cork_board/textures/cork_board_normal.png" id="4_yud15"]
+[ext_resource type="Texture2D" uid="uid://dianexgidk2k0" path="res://props/cork_board/textures/cork_board_roughness.png" id="5_hkav8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_swqqs"]
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("2_csuha")
+metallic = 1.0
+metallic_texture = ExtResource("3_y1l5k")
+normal_enabled = true
+normal_texture = ExtResource("4_yud15")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upcfo"]
+transparency = 1
+albedo_color = Color(0.713726, 0.780392, 0.811765, 0.2)
+roughness_texture = ExtResource("5_hkav8")
+
+[node name="corkboard" instance=ExtResource("1_2l0bw")]
+
+[node name="cork_board" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_swqqs")
+surface_material_override/1 = SubResource("StandardMaterial3D_upcfo")

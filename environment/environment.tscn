@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3b7jq1w05mjx"]
+
+[ext_resource type="Environment" uid="uid://bwbgdsorpog1e" path="res://subway/subway_environment.tres" id="1_ew5bh"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D"]
+transform = Transform3D(-0.805124, -0.578096, -0.13259, 0.0721179, -0.317313, 0.945575, -0.588706, 0.751743, 0.297168, 0, 23.842, 0)
+light_color = Color(1, 0.984314, 0.901961, 1)
+light_energy = 2.0
+light_indirect_energy = 2.0
+shadow_enabled = true
+directional_shadow_blend_splits = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_ew5bh")

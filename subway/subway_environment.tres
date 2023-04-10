@@ -1,0 +1,24 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://bwbgdsorpog1e"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7upkg"]
+
+[sub_resource type="Sky" id="Sky_bgch7"]
+sky_material = SubResource("ProceduralSkyMaterial_7upkg")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_bgch7")
+tonemap_mode = 3
+tonemap_exposure = 2.5
+tonemap_white = 8.0
+ssao_enabled = true
+ssil_enabled = true
+glow_enabled = true
+glow_normalized = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.03
+volumetric_fog_albedo = Color(0.792157, 0.792157, 0.792157, 1)
+volumetric_fog_gi_inject = 0.0
+adjustment_brightness = 1.28
+adjustment_contrast = 1.07
+adjustment_saturation = 0.86

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://h1ti1dvskov6"]
+
+[ext_resource type="Script" path="res://fps_controller/fps_controller.gd" id="1_nspor"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t6b3a"]
+height = 2.5
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_i18ky"]
+auto_exposure_enabled = true
+auto_exposure_min_sensitivity = 200.0
+
+[node name="fps_controller" type="CharacterBody3D"]
+floor_constant_speed = true
+script = ExtResource("1_nspor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_t6b3a")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.20327, 0)
+attributes = SubResource("CameraAttributesPractical_i18ky")
+
+[node name="flashlight" type="SpotLight3D" parent="Camera3D"]
+transform = Transform3D(0.999824, 0, 0.0187786, 0, 1, 0, -0.0187786, 0, 0.999824, 0.238426, -0.101546, 0)
+light_color = Color(1, 0.92549, 0.831373, 1)
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 13.9972
+spot_angle = 26.1488

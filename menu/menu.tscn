@@ -1,0 +1,138 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwl6tw2uqo62h"]
+
+[ext_resource type="Script" path="res://menu/menu.gd" id="1_enk15"]
+
+[node name="Control" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_enk15")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.5
+offset_top = -150.5
+offset_right = 214.5
+offset_bottom = 150.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.352941)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ssil_button" type="CheckButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "SSIL"
+
+[node name="ssao_button" type="CheckButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "SSAO"
+
+[node name="glow" type="CheckButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Glow"
+
+[node name="fps_toggle" type="CheckButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Show FPS          "
+
+[node name="gamepad_invert" type="CheckButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Invert Y"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 2
+
+[node name="mouse_sens_label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Mouse Sensitivity"
+
+[node name="mouse_sens" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+max_value = 10.0
+step = 0.1
+value = 3.0
+
+[node name="mouse_sens_readout" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "3.0"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 2
+
+[node name="control_sens_label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Gamepad Sensitivity"
+
+[node name="control_sens" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+max_value = 10.0
+step = 0.1
+value = 3.0
+
+[node name="control_sens_readout" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "3.0"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 2
+
+[node name="volume_label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Volume"
+
+[node name="volume" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+max_value = 10.0
+step = 0.1
+value = 10.0
+
+[node name="volume_readout" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "10.0"
+
+[node name="resume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "RESUME"
+
+[node name="quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "QUIT"
+
+[connection signal="toggled" from="MarginContainer/VBoxContainer/ssil_button" to="." method="_on_ssil_button_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/ssao_button" to="." method="_on_ssao_button_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/glow" to="." method="_on_glow_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/fps_toggle" to="." method="_on_fps_toggle_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/gamepad_invert" to="." method="_on_gamepad_invert_toggled"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer/mouse_sens" to="." method="_on_mouse_sens_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer2/control_sens" to="." method="_on_control_sens_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer3/volume" to="." method="_on_volume_value_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

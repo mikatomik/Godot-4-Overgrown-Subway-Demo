@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp7vh42nvrmgu"]
+
+[ext_resource type="PackedScene" uid="uid://cu0rqf2h0l0un" path="res://foliage/ivy_2/ivy_wide.gltf" id="1_ka37c"]
+[ext_resource type="Material" uid="uid://b7k0c75ilvw27" path="res://foliage/textures/vegetation.tres" id="2_1igau"]
+
+[node name="ivy_wide" instance=ExtResource("1_ka37c")]
+
+[node name="Ivy_wide" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_1igau")

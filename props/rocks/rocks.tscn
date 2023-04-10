@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c025nhjmtlvyr"]
+
+[ext_resource type="PackedScene" uid="uid://boc0jgmmb8pgk" path="res://props/rocks/rocks.blend" id="1_whtnn"]
+[ext_resource type="Texture2D" uid="uid://cpberkn7lp5ur" path="res://props/cinder_blocks/textures/cinder_block_albedo.png" id="2_d1rcp"]
+[ext_resource type="Texture2D" uid="uid://bifx118qyugnm" path="res://props/cinder_blocks/textures/cinder_blocks_normal.png" id="3_dnb8l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kerxu"]
+albedo_texture = ExtResource("2_d1rcp")
+normal_enabled = true
+normal_texture = ExtResource("3_dnb8l")
+
+[node name="rocks" type="Node3D"]
+
+[node name="rocks" parent="." instance=ExtResource("1_whtnn")]
+
+[node name="Cube_cell016" parent="rocks" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_kerxu")
+
+[editable path="rocks"]

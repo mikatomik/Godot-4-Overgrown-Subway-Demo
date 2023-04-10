@@ -1,0 +1,106 @@
+[gd_scene load_steps=12 format=3 uid="uid://c1dih214ogm2k"]
+
+[ext_resource type="PackedScene" uid="uid://bvcuhiuj4acbu" path="res://props/barrel/barrel.blend" id="1_uj8ef"]
+[ext_resource type="Script" path="res://props/barrel/barrel.gd" id="2_55n3j"]
+[ext_resource type="Texture2D" uid="uid://bmwwajst0wnnq" path="res://props/barrel/textures/fire/Smoke30Frames_0.png" id="2_s3tmb"]
+[ext_resource type="AudioStream" uid="uid://gc6uyh8d47iq" path="res://props/barrel/fire_sfx.mp3" id="4_avaux"]
+
+[sub_resource type="Gradient" id="Gradient_atpg3"]
+offsets = PackedFloat32Array(0, 0.175, 0.227778, 0.283333, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.870588, 0, 0, 1, 1, 0.868, 0.28, 1, 0.870588, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wpklu"]
+gradient = SubResource("Gradient_atpg3")
+
+[sub_resource type="Curve" id="Curve_wtmmp"]
+_data = [Vector2(0, 0.136364), 0.0, 0.0, 0, 0, Vector2(0.138122, 0.490909), 0.0, 0.0, 0, 0, Vector2(1, 0.0272727), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_x5cbn"]
+curve = SubResource("Curve_wtmmp")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l401c"]
+emission_shape = 1
+emission_sphere_radius = 0.3
+direction = Vector3(0, 1, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 0.5
+initial_velocity_max = 3.0
+angular_velocity_max = 40.0
+linear_accel_min = 1.0
+linear_accel_max = 3.0
+angle_max = 360.0
+scale_curve = SubResource("CurveTexture_x5cbn")
+color_ramp = SubResource("GradientTexture1D_wpklu")
+hue_variation_max = 0.06
+anim_speed_max = 1.0
+anim_offset_max = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7tjfv"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_s3tmb")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 5
+particles_anim_loop = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_l0xc0"]
+material = SubResource("StandardMaterial3D_7tjfv")
+
+[node name="barrel" instance=ExtResource("1_uj8ef")]
+script = ExtResource("2_55n3j")
+
+[node name="fire" type="GPUParticles3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.347523, 0)
+amount = 200
+lifetime = 0.5
+randomness = 1.0
+visibility_aabb = AABB(-1.15966, -1.45819, -1.26762, 2.31932, 2.91639, 2.53525)
+draw_order = 3
+trail_lifetime = 10.0
+process_material = SubResource("ParticleProcessMaterial_l401c")
+draw_pass_1 = SubResource("QuadMesh_l0xc0")
+
+[node name="dynam_light" type="OmniLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.06343, 0)
+light_color = Color(1, 0.666667, 0.6, 1)
+shadow_enabled = true
+omni_range = 7.632
+
+[node name="baked_lights" type="Node3D" parent="." index="3"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="baked_lights" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.951039, 0.53966, 0)
+light_color = Color(1, 0.792157, 0.74902, 1)
+light_energy = 0.2
+light_bake_mode = 1
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="baked_lights" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.626242, 0.53966, 0.708744)
+light_color = Color(1, 0.792157, 0.74902, 1)
+light_energy = 0.2
+light_bake_mode = 1
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="baked_lights" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.555787, 0.53966, -0.757052)
+light_color = Color(1, 0.792157, 0.74902, 1)
+light_energy = 0.2
+light_bake_mode = 1
+
+[node name="Timer" type="Timer" parent="." index="4"]
+wait_time = 0.05
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2849, 0)
+stream = ExtResource("4_avaux")
+autoplay = true
+bus = &"sfx_reverb"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

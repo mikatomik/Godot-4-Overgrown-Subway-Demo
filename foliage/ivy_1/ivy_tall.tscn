@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://8cfkawjfihik"]
+
+[ext_resource type="PackedScene" uid="uid://doqtblmbgh4jk" path="res://foliage/ivy_1/ivy_tall.gltf" id="1_u51tc"]
+[ext_resource type="Material" uid="uid://b7k0c75ilvw27" path="res://foliage/textures/vegetation.tres" id="2_xa2gv"]
+
+[node name="ivy_tall" instance=ExtResource("1_u51tc")]
+
+[node name="Ivy_tall" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_xa2gv")

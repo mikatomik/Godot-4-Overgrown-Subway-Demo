@@ -1,0 +1,13 @@
+res://addons/simplegrasstextured/about.tscn::28bb6bd12b38f2b29ed32304727cb6b3::1679465409::res://.godot/exported/133200997/export-e7b3bf3b835337b7f1d1c4c5f31e701e-about.scn
+res://addons/simplegrasstextured/toolbar.tscn::65079a20260436938e606f01db495919::1679465409::res://.godot/exported/133200997/export-d4f1079135efa758c67017550668e5d0-toolbar.scn
+res://foliage/ivy_1/ivy_tall.tscn::a67e55c039353e87c68857a66c7ad11a::1679462629::res://.godot/exported/133200997/export-33394c867758b5db3c010bdb5f3785d0-ivy_tall.scn
+res://foliage/ivy_2/ivy_wide.tscn::69256fc4e71fa67abe137f52a5f05f4d::1679455808::res://.godot/exported/133200997/export-6526395f94b04d9080355014d8d663aa-ivy_wide.scn
+res://foliage/ivy_3/ivy_corner.tscn::b67a9ab511b5ca188aae0c4aa5499967::1679455836::res://.godot/exported/133200997/export-0af84d86859f375e6bcadc53df361d98-ivy_corner.scn
+res://foliage/textures/vegetation.tres::68bced2ddd4479fb69447c931a5e5b43::1679482832::res://.godot/exported/133200997/export-00af53ebd2872c73d5e3f0cfd216cee4-vegetation.res
+res://fps_controller/fps_controller.tscn::f390515dcf8cf973af98c17e1bd9a4b5::1679466874::res://.godot/exported/133200997/export-5620d32cbb6af9f2f4c981391e0604e3-fps_controller.scn
+res://menu/menu.tscn::4594308015b10bb198352212712180cf::1679482845::res://.godot/exported/133200997/export-4e96fb701b3cf98083d3f26d878d1a8e-menu.scn
+res://props/barrel/barrel.tscn::7a8495809ea732bf54ac961b6f000267::1679479182::res://.godot/exported/133200997/export-142f7ecec20e1261acd9a16d94c11a05-barrel.scn
+res://props/barrel/barrel_no_fire.tscn::b5c778cc1d95b4fc3f3106754694cf12::1679472542::res://.godot/exported/133200997/export-3d956fbea0cdda0311ed80ef8b967c93-barrel_no_fire.scn
+res://props/rocks/rocks.tscn::b244c729ab9fccde6c33ef3adbbd763a::1679466661::res://.godot/exported/133200997/export-d41fca42a2646092963bff33c46094f4-rocks.scn
+res://subway/subway.tscn::923f6a64170d9158af25fb62fc8c9285::1679482610::res://.godot/exported/133200997/export-200078b2f0a52f9178795702a98919a4-subway.scn
+res://default_bus_layout.tres::fa827a262ad736b8c730a8fccd549227::1679482812::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res

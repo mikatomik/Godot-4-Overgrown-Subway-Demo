@@ -24,10 +24,12 @@ Godot 4 Demo Scene of an overgrown subway inhabited by squatters.
 ![Screenshot](screenshots/screenshot3.jpg)
 
 ## Included plugins and assets:
-[SimpleGrass](https://github.com/IcterusGames/SimpleGrassTextured) by IcterusGames
+[SimpleGrass](https://github.com/IcterusGames/SimpleGrassTextured) by IcterusGames (MIT)
 
-Ivy Assets by Perfoon from the [Abandoned Space Ship Demo](https://github.com/perfoon/Abandoned-Spaceship-Godot-Demo) (Big thanks for the inspiration, by the way!)
+Ivy Assets by Perfoon from the [Abandoned Space Ship Demo](https://github.com/perfoon/Abandoned-Spaceship-Godot-Demo) (Big thanks for the inspiration, by the way!) (Non-Commercial CC)
 
-Sounds from [Chosic](https://www.chosic.com/)
+All sounds from [Chosic](https://www.chosic.com/)  (CC0 1.0)
 
-Several ground, concrete, metal etc textures from [AmbientCG](https://ambientcg.com/)
+Several ground, concrete, metal etc textures from [AmbientCG](https://ambientcg.com/) (CC0 1.0)
+
+All assets not covered above are available under MIT.

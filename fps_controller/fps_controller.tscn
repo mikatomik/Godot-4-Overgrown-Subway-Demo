@@ -20,8 +20,12 @@ shape = SubResource("CapsuleShape3D_t6b3a")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.20327, 0)
 attributes = SubResource("CameraAttributesPractical_i18ky")
 
-[node name="flashlight" type="SpotLight3D" parent="Camera3D"]
-transform = Transform3D(0.999824, 0, 0.0187786, 0, 1, 0, -0.0187786, 0, 0.999824, 0.238426, -0.101546, 0)
+[node name="flashlight_anchor" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.306117, 1.13132, 0)
+
+[node name="flashlight" type="SpotLight3D" parent="."]
+transform = Transform3D(0.999824, 0, 0.0187786, 0, 1, 0, -0.0187786, 0, 0.999824, 0.238426, 1.10172, 0)
+top_level = true
 light_color = Color(1, 0.92549, 0.831373, 1)
 light_energy = 0.0
 shadow_enabled = true

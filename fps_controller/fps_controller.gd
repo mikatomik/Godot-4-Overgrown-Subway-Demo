@@ -1,6 +1,8 @@
 extends CharacterBody3D
 
 @onready var camera = $Camera3D
+@onready var flashlight = $flashlight
+@onready var flashlight_anchor = $flashlight_anchor
 
 const walk_speed : int = 3
 const sprint_speed : int = 5
@@ -16,12 +18,15 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 func _process(_delta) -> void:
+	
+	update_flashlight_transform()
+	
 	if Input.is_action_just_pressed("toggle_flashlight") and is_player_in_control:
 		if is_flashlight_on:
-			$Camera3D/flashlight.light_energy = 0
+			$flashlight.light_energy = 0
 			is_flashlight_on = false
 		else:
-			$Camera3D/flashlight.light_energy = 3
+			$flashlight.light_energy = 3
 			is_flashlight_on = true
 	
 func _physics_process(delta) -> void:
@@ -73,6 +78,11 @@ func handle_controller_look_input(delta) -> void:
 		
 		
 	camera.rotation.x = clamp(camera.rotation.x, -1.2, 1.2) #Clamp the up/down rotation so we can't flip upside down
+
+func update_flashlight_transform() -> void:
+	flashlight.global_position = flashlight_anchor.global_position
+	flashlight.global_rotation.y = lerp_angle(flashlight.global_rotation.y, flashlight_anchor.global_rotation.y, 0.2)
+	flashlight.global_rotation.x = lerp_angle(flashlight.global_rotation.x, camera.global_rotation.x, 0.2)
 
 func _input(event) -> void:
 	#This is for mouse look

@@ -11,3 +11,7 @@ func _ready() -> void:
 
 func _on_timer_timeout():
 	dynam_light.light_energy = randf_range(0.8, 1.0)
+	dynam_light.omni_range = 8.0 + randf_range(-0.15, 0.15)
+	dynam_light.position.x = randf_range(-0.01, 0.01)
+	dynam_light.position.z = randf_range(-0.01, 0.01)
+	dynam_light.position.y = 2.063 + randf_range(-0.01, 0.01)

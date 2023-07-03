@@ -3,20 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5r47ht2dvitm"
-path="res://.godot/imported/railcar_DefaultMaterial_Metallic.png-a465ef6501986b2b08e9144620661a8c.ctex"
+path.bptc="res://.godot/imported/railcar_DefaultMaterial_Metallic.png-a465ef6501986b2b08e9144620661a8c.bptc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://subway/textures/train_car/railcar_DefaultMaterial_Metallic.png"
-dest_files=["res://.godot/imported/railcar_DefaultMaterial_Metallic.png-a465ef6501986b2b08e9144620661a8c.ctex"]
+dest_files=["res://.godot/imported/railcar_DefaultMaterial_Metallic.png-a465ef6501986b2b08e9144620661a8c.bptc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

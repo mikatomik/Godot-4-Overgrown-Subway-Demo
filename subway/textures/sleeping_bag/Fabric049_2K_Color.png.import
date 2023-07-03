@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4126xgyudtv0"
-path.s3tc="res://.godot/imported/Fabric049_2K_Color.png-cc8538b25bd4d3f2c6cba138b927d030.s3tc.ctex"
+path.bptc="res://.godot/imported/Fabric049_2K_Color.png-cc8538b25bd4d3f2c6cba138b927d030.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,12 +12,12 @@ metadata={
 [deps]
 
 source_file="res://subway/textures/sleeping_bag/Fabric049_2K_Color.png"
-dest_files=["res://.godot/imported/Fabric049_2K_Color.png-cc8538b25bd4d3f2c6cba138b927d030.s3tc.ctex"]
+dest_files=["res://.godot/imported/Fabric049_2K_Color.png-cc8538b25bd4d3f2c6cba138b927d030.bptc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=false
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

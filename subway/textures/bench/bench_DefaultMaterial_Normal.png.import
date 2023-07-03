@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbaavgawrnmr4"
-path.s3tc="res://.godot/imported/bench_DefaultMaterial_Normal.png-8dca799d9ec5191e6701bf9cd86e42aa.s3tc.ctex"
+path.bptc="res://.godot/imported/bench_DefaultMaterial_Normal.png-8dca799d9ec5191e6701bf9cd86e42aa.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,12 +12,12 @@ metadata={
 [deps]
 
 source_file="res://subway/textures/bench/bench_DefaultMaterial_Normal.png"
-dest_files=["res://.godot/imported/bench_DefaultMaterial_Normal.png-8dca799d9ec5191e6701bf9cd86e42aa.s3tc.ctex"]
+dest_files=["res://.godot/imported/bench_DefaultMaterial_Normal.png-8dca799d9ec5191e6701bf9cd86e42aa.bptc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=false
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=1

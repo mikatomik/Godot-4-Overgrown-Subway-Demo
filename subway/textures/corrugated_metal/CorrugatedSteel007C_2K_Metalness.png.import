@@ -3,20 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6khh2dpgiuuw"
-path="res://.godot/imported/CorrugatedSteel007C_2K_Metalness.png-f0c5c279f9d95d81ebd870c39a64ab00.ctex"
+path.bptc="res://.godot/imported/CorrugatedSteel007C_2K_Metalness.png-f0c5c279f9d95d81ebd870c39a64ab00.bptc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://subway/textures/corrugated_metal/CorrugatedSteel007C_2K_Metalness.png"
-dest_files=["res://.godot/imported/CorrugatedSteel007C_2K_Metalness.png-f0c5c279f9d95d81ebd870c39a64ab00.ctex"]
+dest_files=["res://.godot/imported/CorrugatedSteel007C_2K_Metalness.png-f0c5c279f9d95d81ebd870c39a64ab00.bptc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

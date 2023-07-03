@@ -21,8 +21,8 @@ ControlSettings="*res://ControlSettings.gd"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
 
@@ -34,6 +34,10 @@ enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
 
 scene={
 "meshes/light_baking": 2
+}
+texture={
+"compress/high_quality": true,
+"compress/mode": 2
 }
 
 [input]
@@ -152,6 +156,9 @@ pause={
 [rendering]
 
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=5
+occlusion_culling/occlusion_rays_per_thread=1024
+global_illumination/sdfgi/probe_ray_count=3
 anti_aliasing/quality/msaa_3d=1
 anti_aliasing/quality/screen_space_aa=1
+anti_aliasing/quality/use_debanding=true
 occlusion_culling/use_occlusion_culling=true

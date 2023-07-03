@@ -3,20 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1q3qhmjhfi82"
-path="res://.godot/imported/Metal025_2K_Metalness.png-11db528bac6582c89142f947c6aa47bf.ctex"
+path.bptc="res://.godot/imported/Metal025_2K_Metalness.png-11db528bac6582c89142f947c6aa47bf.bptc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://subway/textures/rusty_steel/Metal025_2K-PNG/Metal025_2K_Metalness.png"
-dest_files=["res://.godot/imported/Metal025_2K_Metalness.png-11db528bac6582c89142f947c6aa47bf.ctex"]
+dest_files=["res://.godot/imported/Metal025_2K_Metalness.png-11db528bac6582c89142f947c6aa47bf.bptc.ctex"]
 
 [params]
 
-compress/mode=0
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

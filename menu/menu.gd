@@ -1,6 +1,6 @@
 extends Control
 
-@export var env = preload("res://subway/subway_environment.tres")
+@onready var env = preload("res://subway/subway_environment.tres")
 @export var fps_readout : Label
 
 

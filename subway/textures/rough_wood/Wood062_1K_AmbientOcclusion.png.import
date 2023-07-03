@@ -16,7 +16,7 @@ dest_files=["res://.godot/imported/Wood062_1K_AmbientOcclusion.png-15f4fda8f8e6b
 [params]
 
 compress/mode=0
-compress/high_quality=false
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

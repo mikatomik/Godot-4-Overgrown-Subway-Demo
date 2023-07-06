@@ -2,6 +2,7 @@ extends Node3D
 
 @export var player : CharacterBody3D
 @export var anim_player : AnimationPlayer
+@export var environment : WorldEnvironment
 
 func _ready() -> void:
 	anim_player.play("fade_in")

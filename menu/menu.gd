@@ -1,8 +1,9 @@
 extends Control
 
-@onready var env = preload("res://subway/subway_environment.tres")
+@onready var env = get_parent().environment.get_environment()
 @export var fps_readout : Label
 
+signal scene_initialized
 
 func _process(_delta):
 	if fps_readout.visible: #Only ask to print out FPS if we can see it, otherwise its a waste

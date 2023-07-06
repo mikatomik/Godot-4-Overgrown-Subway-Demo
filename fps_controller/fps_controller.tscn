@@ -11,7 +11,7 @@ dof_blur_far_enabled = true
 dof_blur_far_distance = 60.0
 dof_blur_far_transition = 10.0
 dof_blur_amount = 0.2
-auto_exposure_min_sensitivity = 150.0
+auto_exposure_min_sensitivity = 130.0
 
 [node name="fps_controller" type="CharacterBody3D"]
 floor_constant_speed = true
